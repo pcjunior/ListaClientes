@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Diário</title>
+		<link rel="stylesheet" href="css/jquery.mobile-1.1.0.min.css" />
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/jquery.mobile-1.1.0.min.js"></script>
+
+		<script type="text/javascript" src="phonegap.js"></script>  
+
+	</head>
+
+
+	<body >
+
+		<!-- Arquivos do projeto -->
+		<script src="js/Diversos.js"></script>
+		<script src="js/Controller.js"></script>
+		<script src="js/Model.js"></script>
+
+		<!-- Iniciar a página #lista -->
+		<div data-role="page" id="lista">
+
+			<div data-role="header">
+				<h1>Diário</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="criar.html" onclick="" data-icon="plus" data-theme="b">Criar</a></li>
+						<li><a href="" onclick="apagarDadosCliente()" data-icon="plus" data-theme="b">Apagar Dados</a></li>
+						<li><a href="" onclick="sincronismo()" data-icon="plus" data-theme="b">Sincronismo</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="content" >
+
+				<ul id="detalhescliente" data-role="listview"></ul>
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

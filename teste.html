@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Diário</title>
+		<script src='js/jquery.js'></script>
+		<script>
+		$(document).ready(function(){
+			$.post("http://www.bartofil.com.br/site/sincronismo.php", {},
+        function(retorno){
+           jQuery("#teste").html(retorno);
+		   alert(retorno);
+        });
+
+		});
+		</script>
+
+
+	</head>
+
+
+	<body >
+
+
+		<!-- Iniciar a página #lista -->
+		<div data-role="page" id="lista">
+
+			<div data-role="header">
+				<h1>teste</h1>
+			</div>
+
+			<div data-role="content" id='teste'>
+
+
+			</div>
+
+		</div>
+
+	</body>
+</html>
