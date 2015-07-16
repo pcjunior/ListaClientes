@@ -42,50 +42,8 @@
 
 	setInterval(sincronismo, 10000);
 	
-	function sincronismo(){
-	
-	//	apagarDadosCliente();	
-	
-		var codcliente = '';
-		var nomerazao  = '';
-		var endereco   = '';
-		var telefone   = '';		
-
-		$.getJSON("http://www.bartofil.com.br/site/sincronismo.php",function(retorno){	
-
-			db.transaction(function(transaction) {
-				for(i=0; i < retorno.clie.length; i++)
-				{
-				
-					codcliente = retorno.clie[i].codpessoa;
-					nomerazao  = retorno.clie[i].nomerazao;
-					endereco   = retorno.clie[i].enderrua;
-					telefone   = retorno.clie[i].foneddd1+' '+retorno.clie[i].fonenro1;
-			
-					//cliente.push("'INSERT INTO bcr_cliente(codcliente, nomerazao, endereco, telefone) VALUES (?,?,?,?)',['"+retorno.clie[i].codpessoa+"','"+retorno.clie[i].nomerazao+"','"+retorno.clie[i].enderrua+"','"+retorno.clie[i].foneddd1+"-"+retorno.clie[i].fonenro1+"']");
-				
-
-					transaction.executeSql('INSERT INTO bcr_cliente(codcliente, nomerazao, endereco, telefone) VALUES (?,?,?,?)',[codcliente, nomerazao, endereco, telefone], null,null);       
-				}
-			} ,errorHandler,successCallBack);
-
-		
-		
-		});
-		
-		/*
-			for(i=0; i < retorno.clie.length; i++)
-			{
-				
-				cliente = new Object();
-				cliente.codcliente = retorno.clie[i].codpessoa;
-				cliente.nomerazao  = retorno.clie[i].nomerazao;
-				cliente.endereco   = retorno.clie[i].enderrua;
-				cliente.telefone   = retorno.clie[i].foneddd1 + ' ' +retorno.clie[i].fonenro1;
-			}
-		*/
-  
-
+	function sincronismo(){	
+		alert('teste1');
     }
 
     // Funções reponsáveis pelas açoes da página de visualização
